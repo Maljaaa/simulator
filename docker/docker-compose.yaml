@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:15
@@ -48,8 +46,22 @@ services:
     networks:
       - dev-network
 
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: dev_jenkins
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock  # Docker inside Jenkins
+    networks:
+      - dev-network
+
 volumes:
   postgres_data:
+  jenkins_home:
 
 networks:
   dev-network:
