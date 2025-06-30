@@ -59,14 +59,14 @@ services:
     networks:
       - dev-network
 
-  frontend:
-    build:
-      context: ../frontend
-      dockerfile: ../docker/Dockerfile.frontend
-    ports:
-      - "3000:3000"
-    networks:
-      - dev-network
+#  frontend:
+#    build:
+#      context: ../frontend
+#      dockerfile: ../docker/Dockerfile.frontend
+#    ports:
+#      - "3000:3000"
+#    networks:
+#      - dev-network
 
 volumes:
   postgres_data:
