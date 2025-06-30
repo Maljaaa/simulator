@@ -46,16 +46,25 @@ services:
     networks:
       - dev-network
 
-  jenkins:
-    image: jenkins/jenkins:lts
-    container_name: dev_jenkins
-    user: root
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/Dockerfile.backend
     ports:
-      - "8080:8080"
-      - "50000:50000"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock  # Docker inside Jenkins
+      - "8081:8081"
+    depends_on:
+      - postgres
+      - redis
+      - kafka
+    networks:
+      - dev-network
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    ports:
+      - "3000:3000"
     networks:
       - dev-network
 
