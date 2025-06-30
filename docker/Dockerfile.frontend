@@ -1,21 +1,19 @@
 FROM node:20-alpine
+
 WORKDIR /app
 
-# 1. package.json, package-lock.json 먼저 복사해서 의존성 설치만 먼저 하게끔
 COPY package*.json ./
+
+RUN apk add --no-cache python3 make g++
 
 RUN npm install
 
-# 2. 나머지 소스코드 복사
 COPY . .
 
-# 3. 빌드 실행
 RUN npm run build
 
-# 4. serve 패키지 전역 설치
 RUN npm install -g serve
 
 EXPOSE 3000
 
-# 5. 앱 실행
 CMD ["serve", "-s", "dist", "-l", "3000"]
