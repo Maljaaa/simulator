@@ -1,18 +1,4 @@
 services:
-  postgres:
-    image: postgres:15
-    container_name: dev_postgres
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: devuser
-      POSTGRES_PASSWORD: devpass
-      POSTGRES_DB: devdb
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - dev-network
-
   redis:
     image: redis:7
     container_name: dev_redis
@@ -53,7 +39,6 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - postgres
       - redis
       - kafka
     networks:
@@ -67,10 +52,6 @@ services:
       - "3000:3000"
     networks:
       - dev-network
-
-volumes:
-  postgres_data:
-  jenkins_home:
 
 networks:
   dev-network:
