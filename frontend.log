@@ -2,9 +2,13 @@
 > frontend@0.0.0 dev
 > vite
 
-Port 5173 is in use, trying another one...
 
-  VITE v7.0.0  ready in 226 ms
+  VITE v7.0.0  ready in 936 ms
 
-  ➜  Local:   http://localhost:5174/
+  ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+npm notice
+npm notice New major version of npm available! 10.9.2 -> 11.4.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
+npm notice To update run: npm install -g npm@11.4.2
+npm notice

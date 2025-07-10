@@ -1,7 +1,8 @@
-> Task :compileJava UP-TO-DATE
-> Task :processResources UP-TO-DATE
-> Task :classes UP-TO-DATE
-> Task :resolveMainClassName UP-TO-DATE
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :resolveMainClassName
 
 > Task :bootRun
 
@@ -14,11 +15,11 @@
 
  :: Spring Boot ::                (v3.5.3)
 
-2025-06-24T21:51:56.308+09:00  INFO 24851 --- [simulator] [  restartedMain] s.p.simulator.SimulatorApplication       : Starting SimulatorApplication using Java 21.0.7 with PID 24851 (/Users/shin/Desktop/playground/simulator/backend/build/classes/java/main started by shin in /Users/shin/Desktop/playground/simulator/backend)
-2025-06-24T21:51:56.310+09:00  INFO 24851 --- [simulator] [  restartedMain] s.p.simulator.SimulatorApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-06-24T21:51:56.337+09:00  INFO 24851 --- [simulator] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-06-24T21:51:56.337+09:00  INFO 24851 --- [simulator] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-06-24T21:51:56.448+09:00 ERROR 24851 --- [simulator] [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+2025-07-02T22:59:55.528+09:00  INFO 78281 --- [simulator] [  restartedMain] s.p.simulator.SimulatorApplication       : Starting SimulatorApplication using Java 21.0.7 with PID 78281 (/Users/shin/Desktop/playground/simulator/backend/build/classes/java/main started by shin in /Users/shin/Desktop/playground/simulator/backend)
+2025-07-02T22:59:55.529+09:00  INFO 78281 --- [simulator] [  restartedMain] s.p.simulator.SimulatorApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-07-02T22:59:55.561+09:00  INFO 78281 --- [simulator] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-02T22:59:55.561+09:00  INFO 78281 --- [simulator] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-02T22:59:55.695+09:00 ERROR 78281 --- [simulator] [  restartedMain] o.s.boot.SpringApplication               : Application run failed
 
 java.lang.IllegalStateException: No Docker Compose file found in directory '/Users/shin/Desktop/playground/simulator/backend/.'
 	at org.springframework.util.Assert.state(Assert.java:101) ~[spring-core-6.2.8.jar:6.2.8]
@@ -47,5 +48,5 @@ java.lang.IllegalStateException: No Docker Compose file found in directory '/Use
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.3.jar:3.5.3]
 
 
-BUILD SUCCESSFUL in 2s
-4 actionable tasks: 1 executed, 3 up-to-date
+BUILD SUCCESSFUL in 11s
+4 actionable tasks: 4 executed
