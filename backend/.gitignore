@@ -38,3 +38,7 @@ out/
 
 ### Shell Script ###
 *.sh
+
+### 보안 키 및 인증서 ###
+*.pem
+application.properties
