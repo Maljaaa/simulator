@@ -1,12 +1,4 @@
 services:
-  redis:
-    image: redis:7
-    container_name: dev_redis
-    ports:
-      - "6379:6379"
-    networks:
-      - dev-network
-
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
     container_name: dev_zookeeper
@@ -39,7 +31,6 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      - redis
       - kafka
     networks:
       - dev-network
